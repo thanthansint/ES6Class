@@ -28,8 +28,11 @@ ajax.onreadystatechange = function(){
         console.log(quoteJSON.quote);
         let obj = new kayneQuote(quoteJSON.quote);
         console.log(obj.changeUpperCase());
+        document.getElementById('upper').innerText = obj.changeUpperCase();
         console.log(obj.changeLowerCase());
+        document.getElementById('lower').innerText = obj.changeLowerCase();
         for (i=0; i<obj.splitCase().length; i++){
+            document.getElementById('split').innerHTML += '<p>' + obj.splitCase()[i] + '</p>';
             console.log(obj.splitCase()[i]);
         }       
     }
