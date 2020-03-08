@@ -6,10 +6,10 @@ class kayneQuote{
         this.newkayneWisdom = this.kayneWisdom.toUpperCase();
         return this.newkayneWisdom;
     }
-    // changeLowerCase() {
-    //     this.newkayneWisdom = this.kayneWisdom.toLowerCase();
-    //     return this.newkayneWisdom;
-    // }
+    changeLowerCase() {
+        this.newkayneWisdom = this.kayneWisdom.toLowerCase();
+        return this.newkayneWisdom;
+    }
     // splitCase() {
     //     this.newkayneWisdom = this.kayneWisdom.split(" ");
     //     return this.newkayneWisdom;
@@ -28,7 +28,7 @@ ajax.onreadystatechange = function(){
         console.log(quoteJSON.quote);
         let obj = new kayneQuote(quoteJSON.quote);
         console.log(obj.changeUpperCase());
-        // console.log(obj.changeLowerCase());
+        console.log(obj.changeLowerCase());
         // for (i=0; i<obj.splitCase().length; i++){
         //     console.log(obj.splitCase()[i]);
         // }       
@@ -36,5 +36,3 @@ ajax.onreadystatechange = function(){
 }
 ajax.open('GET', 'https://api.kanye.rest/', true);
 ajax.send();
-
-
