@@ -10,10 +10,10 @@ class kayneQuote{
         this.newkayneWisdom = this.kayneWisdom.toLowerCase();
         return this.newkayneWisdom;
     }
-    // splitCase() {
-    //     this.newkayneWisdom = this.kayneWisdom.split(" ");
-    //     return this.newkayneWisdom;
-    // }
+    splitCase() {
+        this.newkayneWisdom = this.kayneWisdom.split(" ");
+        return this.newkayneWisdom;
+    }
 }
 
 //make AJAX request to get quote
@@ -29,9 +29,9 @@ ajax.onreadystatechange = function(){
         let obj = new kayneQuote(quoteJSON.quote);
         console.log(obj.changeUpperCase());
         console.log(obj.changeLowerCase());
-        // for (i=0; i<obj.splitCase().length; i++){
-        //     console.log(obj.splitCase()[i]);
-        // }       
+        for (i=0; i<obj.splitCase().length; i++){
+            console.log(obj.splitCase()[i]);
+        }       
     }
 }
 ajax.open('GET', 'https://api.kanye.rest/', true);
